@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+Camper.destroy_all
+Activity.destroy_all
+Signup.destroy_all
 
 camper1 = Camper.create(name: 'Caitlin',age: 8)
 camper2 = Camper.create(name: 'Lizzie', age: 9)
@@ -28,15 +30,16 @@ activity7 = Activity.create(name: 'Canoeing', difficulty: 3)
 activity8 = Activity.create(name: 'Windsurfing', difficulty: 5)
 
 
-# Signup.create(camper: camper1, activity: activity2, time: 11)
-# Signup.create(camper: camper1, activity: activity1, time: 12)
-# Signup.create(camper: camper1, activity: activity4, time: 15)
-# Signup.create(camper: camper2, activity: activity2, time: 11)
-# Signup.create(camper: camper2, activity: activity1, time: 12)
-# Signup.create(camper: camper3, activity: activity4, time: 16)
-# Signup.create(camper: camper3, activity: activity4, time: 16)
-# Signup.create(camper: camper3, activity: activity4, time: 16)
-# Signup.create(camper: camper3, activity: activity4, time: 16)
-# Signup.create(camper: camper4, activity: activity8, time: 16)
-# Signup.create(camper: camper5, activity: activity7, time: 11)
-# Signup.create(camper: camper3, activity: activity4, time: 12)
+Signup.create(camper_id: camper1.id, activity_id: activity2.id, time: 11)
+Signup.create(camper_id: camper1.id, activity_id: activity1.id, time: 12)
+Signup.create(camper_id: camper1.id, activity_id: activity4.id, time: 15)
+Signup.create(camper_id: camper2.id, activity_id: activity2.id, time: 11)
+Signup.create(camper_id: camper2.id, activity_id: activity1.id, time: 12)
+Signup.create(camper_id: camper3.id, activity_id: activity4.id, time: 16)
+Signup.create(camper_id: camper3.id, activity_id: activity4.id, time: 16)
+Signup.create(camper_id: camper3.id, activity_id: activity4.id, time: 16)
+Signup.create(camper_id: camper3.id, activity_id: activity4.id, time: 16)
+Signup.create(camper_id: camper4.id, activity_id: activity8.id, time: 16)
+Signup.create(camper_id: camper5.id, activity_id: activity7.id, time: 11)
+Signup.create(camper_id: camper3.id, activity_id: activity4.id, time: 12)
+

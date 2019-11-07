@@ -1,0 +1,20 @@
+<%if @errors%>
+    <ol>
+    <% @errors.each do |error|%>
+        <li><%= error%></li>
+    <%end%>
+    </ol>
+<%end%>
+
+<h1>New SignUp Form</h1>
+
+<%= form_for @signup do |f|%>
+    <%= f.label "Camper"%>
+    <%= f.collection_select :camper_id, Camper.all, :id, :name%>
+    <%= f.label "Activity"%>
+    <%= f.collection_select :activity_id, Activity.all, :id, :name%>
+    <%= f.label "Time"%>
+    <%= f.number_field :time%>
+
+    <%=f.submit%>
+<%end%>
